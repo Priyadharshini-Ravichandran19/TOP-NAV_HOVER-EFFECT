@@ -1,0 +1,80 @@
+<html>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <head><title>HOVER EFFECT IN NAVIGATION TOP-BARS</title>
+    <style>
+        body
+        {
+            padding:5%;
+            margin: 10%;
+            display:flex;
+            justify-content: top;
+            align-items: top;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(189, 219, 172);
+        }
+       ul
+       {
+        padding: 0%;
+        margin: 0%;
+        display: flex;
+        list-style-type: none;
+       }
+       ul li a
+       {
+         color:maroon;
+         font-size: medium ;
+         text-transform: uppercase;
+         padding:5px 10px;
+         margin: 0px 10px;
+         position: relative;
+         transition: all 0.5s;
+       }
+       a:hover{
+             background-color: violet;
+             color: black;   
+            }
+       a::before{
+        position: absolute;
+        bottom: 12px;
+        left:12px;
+        height: 12px;
+        width:12px;
+        border:5px solid darkviolet;
+        border-width: 0px 0px 3px 3px;
+        transition: all 0.2s ;
+        opacity:0;
+       }
+       a::after{
+        position: absolute;
+        top:12px;
+        right:12px;
+        height: 12px;
+        width:12px;
+        border:5px solid darkviolet;
+        border-width: 3px 3px 0px 0px ;
+        opacity:0;
+        transition: all 0.2s ;
+       }
+       a:hover::before
+       {
+        opacity: 1;
+        bottom:-8px;
+        left:-8px;
+
+       }
+       a:hover::after{
+        opacity: 1;
+        right:-8px;
+        top:-8px;
+       }
+    </style></head>
+    <body style="background-color: khaki;">
+        <ul>
+            <li><a href="#">Home&nbsp;&nbsp;</a></li>
+            <li><a href="#">about&nbsp;&nbsp;</a></li>
+            <li><a href="#">services&nbsp;&nbsp;</a></li>
+            <li><a href="#">achievements&nbsp;&nbsp;</a></li>
+            <li><a href="#">contact&nbsp;&nbsp;</a></li>
+        </ul>
+    </body>
+</html>
